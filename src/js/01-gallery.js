@@ -35,23 +35,9 @@ function onGalleryContainerClick(evt) {
   evt.preventDefault();
   if (evt.target.nodeName !== 'IMG') {
     return;
-  }
+  };
 
-  const instance = SimpleLightbox.create(`
-  <div class="modal">
-    <img
-      class="gallery__image"
-      src="${evt.target.dataset.source}"
-      width="800"
-      alt="${evt.target.alt}"
-    />
-  </div>
-`);
-
-  instance.show();
-}
-
-const lightbox = new SimpleLightbox('.gallery a', {
+  const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
